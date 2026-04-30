@@ -1,0 +1,10 @@
+{
+  "name": "account&WhatsApp AI",
+  "description": "Sistem Pengurusan Komprehensif dengan Automasi WhatsApp AI, Payroll, Inventori, dan Analitis Kewangan Pintar.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

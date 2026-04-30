@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "mnf_bookings": {
+      "title": "MNF Bookings",
+      "description": "Customer service bookings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerName": { "type": "string" },
+        "phone": { "type": "string" },
+        "date": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "service": { "type": "string" },
+        "status": { "type": "string" },
+        "team": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["customerName", "phone", "date", "timeSlot"]
+    },
+    "mnf_employees": {
+      "title": "MNF Employees",
+      "description": "Staff member records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "phone": { "type": "string" },
+        "active": { "type": "boolean" }
+      }
+    },
+    "mnf_inventory": {
+      "title": "MNF Inventory",
+      "description": "Parts and materials inventory",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "stock": { "type": "number" },
+        "buyPrice": { "type": "number" },
+        "sellPrice": { "type": "number" }
+      }
+    }
+  },
+  "firestore": {
+    "/mnf_bookings/{bookingId}": {
+      "schema": "mnf_bookings",
+      "description": "Collection of all bookings"
+    },
+    "/mnf_employees/{employeeId}": {
+      "schema": "mnf_employees",
+      "description": "Staff list"
+    },
+    "/mnf_inventory/{itemId}": {
+      "schema": "mnf_inventory",
+      "description": "Inventory items"
+    },
+    "/mnf_payroll/{id}": { "schema": "object", "description": "Staff payroll records" },
+    "/mnf_sales/{id}": { "schema": "object", "description": "Sales records" },
+    "/mnf_expenses/{id}": { "schema": "object", "description": "Expense records" },
+    "/mnf_customers/{id}": { "schema": "object", "description": "Customer database" },
+    "/mnf_promotions/{id}": { "schema": "object", "description": "Marketing promotions" },
+    "/mnf_ai_training/{id}": { "schema": "object", "description": "AI Training data" },
+    "/mnf_chat_logs/{id}": { "schema": "object", "description": "WhatsApp chat history" },
+    "/mnf_transactions/{id}": { "schema": "object", "description": "Financial transactions" }
+  }
+}
